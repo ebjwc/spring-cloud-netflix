@@ -28,6 +28,8 @@ public class HystrixDashboardProperties {
 	 * the Hystrix response stream
 	 */
 	private boolean enableIgnoreConnectionCloseHeader = false;
+	
+	private String longTermHistoryDashboardUrl;
 
 	public boolean isEnableIgnoreConnectionCloseHeader() {
 		return enableIgnoreConnectionCloseHeader;
@@ -37,5 +39,13 @@ public class HystrixDashboardProperties {
 			boolean enableIgnoreConnectionCloseHeader) {
 		this.enableIgnoreConnectionCloseHeader = enableIgnoreConnectionCloseHeader;
 	}
+
+    public String getLongTermHistoryDashboardUrl() {
+        return longTermHistoryDashboardUrl;
+    }
+
+    public void setLongTermHistoryDashboardUrl(String longTermHistoryDashboardUrl) {
+        this.longTermHistoryDashboardUrl = longTermHistoryDashboardUrl;
+    }
 
 }

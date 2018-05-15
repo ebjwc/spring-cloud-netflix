@@ -19,6 +19,7 @@ package org.springframework.cloud.netflix.hystrix.dashboard;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -82,6 +83,10 @@ public class HystrixDashboardConfiguration {
 		configurer.setTemplateLoaderPaths(DEFAULT_TEMPLATE_LOADER_PATH);
 		configurer.setDefaultEncoding(DEFAULT_CHARSET);
 		configurer.setPreferFileSystemAccess(false);
+		
+		Map<String, Object> variables = new HashMap<>();
+		variables.put("longTermHistoryDashboardUrl", dashboardProperties.getLongTermHistoryDashboardUrl());
+		configurer.setFreemarkerVariables(variables);
 		return configurer;
 	}
 

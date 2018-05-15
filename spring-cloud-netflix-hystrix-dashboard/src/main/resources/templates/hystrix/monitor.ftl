@@ -86,7 +86,9 @@
 		 */ 
 		 
 		 // commands
-		var hystrixMonitor = new HystrixCommandMonitor('dependencies', {includeDetailIcon:false});
+		var hystrixMonitor = new HystrixCommandMonitor('dependencies', 
+				{includeDetailIcon:true, 
+				longTermHistoryDashboardUrl: '${longTermHistoryDashboardUrl!''}'});
 		
 		var stream = getUrlVars()["stream"];
 		

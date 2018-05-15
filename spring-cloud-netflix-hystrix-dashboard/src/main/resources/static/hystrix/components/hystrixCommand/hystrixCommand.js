@@ -88,6 +88,8 @@
 		function preProcessData(data) {
 			// set defaults for values that may be missing from older streams
 			setIfMissing(data, "rollingCountBadRequests", 0);
+			setIfMissing(data, "longTermHistoryDashboardUrl", self.args.longTermHistoryDashboardUrl);
+			
 			// assert all the values we need
 			validateData(data);
 			// escape string used in jQuery & d3 selectors
