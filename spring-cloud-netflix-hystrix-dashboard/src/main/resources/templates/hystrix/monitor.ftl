@@ -58,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="dependencies" class="row dependencies"><span class="loading">Loading ...</span></div>
+		<div id="dependencies" class="row dependencies"><span class="loading">Hystrix data is not (yet?) available for this cluster</span></div>
 		
 		<div class="spacer"></div>
 
@@ -73,7 +73,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="dependencyThreadPools" class="row dependencyThreadPools"><span class="loading">Loading ...</span></div>
+		<div id="dependencyThreadPools" class="row dependencyThreadPools"><span class="loading">Hystrix data is not (yet?) available for this cluster</span></div>
 	</div>
 
 
