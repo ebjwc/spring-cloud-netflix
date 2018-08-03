@@ -64,6 +64,9 @@ public class RetryableRibbonLoadBalancingHttpClient extends RibbonLoadBalancingH
 				CommonClientConfigKey.ReadTimeout, this.readTimeout));
 		builder.setRedirectsEnabled(config.get(
 				CommonClientConfigKey.FollowRedirects, this.followRedirects));
+//		builder.setContentCompressionEnabled(config.get(
+//		        new CommonClientConfigKey<Boolean>("ContentCompressionEnabled"){}, true));
+		builder.setContentCompressionEnabled(false);
 
 		final RequestConfig requestConfig = builder.build();
 		final LoadBalancedRetryPolicy retryPolicy = loadBalancedRetryPolicyFactory.create(this.getClientName(), this);
